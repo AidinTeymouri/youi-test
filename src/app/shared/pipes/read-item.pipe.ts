@@ -1,3 +1,5 @@
+//For transforming JSON data to Object
+
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({

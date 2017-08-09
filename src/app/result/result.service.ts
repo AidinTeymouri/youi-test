@@ -26,4 +26,5 @@ export class ResultService {
     return this.items[index];
   }
 
+
 }

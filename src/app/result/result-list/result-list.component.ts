@@ -31,4 +31,5 @@ export class ResultListComponent implements OnInit, OnDestroy {
 	ngOnDestroy() {
 		this.subscription.unsubscribe();
 	}
+
 }

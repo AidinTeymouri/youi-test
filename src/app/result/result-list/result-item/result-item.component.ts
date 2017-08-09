@@ -12,11 +12,13 @@ export class ResultItemComponent implements OnInit {
 
 	@Input() result: Result;
  	@Input() index: number;
- 	is_answered = true;
+
+
  	
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

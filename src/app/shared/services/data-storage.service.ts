@@ -8,9 +8,10 @@ import { ResultService } from '../../result/result.service';
 @Injectable()
 export class DataStorageService {
   res: Result[];
+  answer: boolean;
   constructor(private http: Http, private resultService: ResultService) {}
 
-
+  // Connect to the API
   getResults() {
     let url = 'https://api.stackexchange.com/2.2/questions?pagesize=10&order=desc&sort=votes&tagged=angular&site=stackoverflow';
     
@@ -20,7 +21,7 @@ export class DataStorageService {
         const results: Result[] = response.json();
         return results;
       })
-
+    //get child properties
       .subscribe(res1 =>
       {
         const myArray = [];
@@ -29,9 +30,10 @@ export class DataStorageService {
         }
         this.res = myArray;
         this.resultService.setResults(this.res);
-        console.log(JSON.stringify(this.res))
+        // console.log(JSON.stringify(this.res))
       }
       );
     }
+
   }
 
