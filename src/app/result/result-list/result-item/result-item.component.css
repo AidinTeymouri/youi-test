@@ -1,0 +1,24 @@
+.item {
+	border: 2px solid grey;
+
+}
+
+.answer {
+	border: 1px solid green;
+	width: 70px;
+	height: 70px;
+}
+
+.answer > p {
+	margin-top: 10px;
+}
+
+.answered {
+	background-color: green;
+	color: white;
+}
+
+.tags {
+	display: inline-block;
+	background-color: lightblue;
+}

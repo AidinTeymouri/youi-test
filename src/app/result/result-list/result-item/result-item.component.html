@@ -1,0 +1,35 @@
+<div *ngFor="let item of result | readItem" class="item">
+
+	<div class="row">
+		<div class="col-md-4">
+	
+			<div class="votes text-center">
+				<p>{{item?.view_count}}</p>
+				<p>Votes</p>
+			</div>
+
+			<div class="answer text-center">
+				<strong>{{item?.answer_count}}</strong>
+				<p>answers</p>
+			</div>
+		<!-- <p>{{item?.tags}}</p> -->
+		</div>
+
+		<div class="col-md-8">
+			<a href="{{item?.link}}">{{item?.title}}</a>
+			<br>
+			
+			<ul class="tags">
+				<ol class="text-center"><p>{{item?.tags}}</p></ol>
+			</ul>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-md-4 pull-right">
+		<p>asked {{item?.creation_date | date}}</p>
+			
+		</div>
+	</div>
+</div>
+
